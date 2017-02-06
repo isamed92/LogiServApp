@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.logserv.view.TrayectosOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.5472779369627507" layoutX="24.0" layoutY="99.0" prefHeight="597.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label text="Informacion" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+                  <TableView fx:id="trTable" layoutX="14.0" layoutY="61.0" prefHeight="300.0" prefWidth="200.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="40.0">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <columns>
+                        <TableColumn fx:id="origenColumn" prefWidth="75.0" text="Origen" />
+                        <TableColumn fx:id="destinoColumn" prefWidth="75.0" text="Destino" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="91.0" layoutY="350.0" mnemonicParsing="false" text="Facturacion" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="350.0" />
+                  <Button layoutX="17.0" layoutY="350.0" mnemonicParsing="false" onAction="#handleNewPerson" text="Nuevo" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Detalle/Edición" />
+                  <ToggleButton layoutX="14.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleEditPerson" text="Editar" />
+                  <GridPane layoutX="14.0" layoutY="86.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="80.0">
+                     <children>
+                        <Label text="Origen" />
+                        <Label text="Destino" GridPane.rowIndex="1" />
+                        <Label fx:id="origenLabel" text="Label" GridPane.columnIndex="1" />
+                        <Label fx:id="destinoLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Kilometros" GridPane.rowIndex="2" />
+                        <Label text="Salida" GridPane.rowIndex="3" />
+                        <Label text="Llegada" GridPane.rowIndex="4" />
+                        <Label fx:id="kilometrosLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="salidaLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="llegadaLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="129.0" minWidth="10.0" prefWidth="121.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="147.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
